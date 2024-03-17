@@ -1,0 +1,16 @@
+{
+  "name": "global snippets config",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact"
+        ],
+        "path": "./ecmascript.json"
+      }
+    ]
+  }
+}
