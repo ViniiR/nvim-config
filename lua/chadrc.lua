@@ -7,6 +7,9 @@ M.ui = {
 		theme = "vscode_colored",
 		-- minimal, default, vscode, _colored
 	},
+    telescope = {
+        style = 'bordered'
+    },
 	nvdash = {
 		load_on_startup = true,
 		-- header = {
@@ -58,7 +61,7 @@ M.ui = {
 		["@function.builtin"] = { link = "CustomVFunction" },
 		["@variable"] = { link = "CustomVVariable" },
 		["@variable.member"] = { link = "CustomVProperty" },
-		["@spell"] = { link = "CustomVSpell" },
+		-- ["@spell"] = { guifg = "cyan" },
 	},
 }
 

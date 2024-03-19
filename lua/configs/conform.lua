@@ -17,27 +17,28 @@ local options = {
 		typescriptreact = {
 			"prettierd",
 		},
-        json = {
-            "prettierd"
-        },
-        jsonc = {
-            "prettierd"
-        },
+		json = {
+			"prettierd",
+		},
+		jsonc = {
+			"prettierd",
+		},
 	},
 	ft_parsers = {
 		javascript = "babel",
 		javascriptreact = "babel",
 		typescript = "typescript",
 		typescriptreact = "typescript",
-		--     vue = "vue",
+		vue = "vue",
+		-- rust = "rust",
 		css = "css",
 		scss = "scss",
 		--     less = "less",
 		html = "html",
 		json = "json",
-		--     jsonc = "json",
-		--     yaml = "yaml",
-		--     markdown = "markdown",
+		    jsonc = "json",
+		    yaml = "yaml",
+		    markdown = "markdown",
 		--     ["markdown.mdx"] = "mdx",
 		--     graphql = "graphql",
 		--     handlebars = "glimmer",

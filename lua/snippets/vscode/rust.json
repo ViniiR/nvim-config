@@ -1,0 +1,7 @@
+
+{
+  "debug macro!": {
+    "prefix": "db",
+    "body": ["dbg!($1);"]
+  }
+}

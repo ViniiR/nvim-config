@@ -1,6 +1,8 @@
 require("nvchad.options")
 
 --
+vim.opt.spelllang = { "en_us" }
+vim.opt.spell = true
 
 -- my options
 vim.opt["tabstop"] = 4
@@ -9,8 +11,9 @@ vim.opt["shiftwidth"] = 4
 vim.g.vscode_snippets_path = vim.fn.stdpath("config") .. "/lua/snippets/vscode"
 
 -- remaps CTRL ^H ( backspace ) to delete word
-vim.api.nvim_set_keymap('i', '<C-H>', '<C-W>', {noremap = true})
-vim.api.nvim_set_keymap('c', '<C-H>', '<C-W>', {noremap = true})
+-- possibly broken but no need to fix
+vim.api.nvim_set_keymap("i", "<C-H>", "<C-W>", { noremap = true })
+vim.api.nvim_set_keymap("c", "<C-H>", "<C-W>", { noremap = true })
 
 -- attempt to use ctrl del but doesnt work
 -- vim.api.nvim_set_keymap('i', '<C-D>', 'dw', {noremap = true})
@@ -25,7 +28,8 @@ vim.cmd("highlight CustomVFunction guifg=#d4814e")
 vim.cmd("highlight CustomVType guifg=#4ebd90")
 vim.cmd("highlight CustomVProperty guifg=#8dc5e3")
 vim.cmd("highlight CustomVPurple guifg=#bfa7f2")
-vim.cmd("highlight CustomVSpell guifg=#11abe4")
+vim.cmd("highlight Constant guifg=#4d98d6")
+-- vim.cmd("highlight spell guifg=#11abe4")
 
 -- Highlight the @foo.bar capture group with the "Identifier" highlight group
 -- [] {} ()

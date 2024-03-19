@@ -11,3 +11,4 @@ map("n", "<leader>fm", function()
 end, { desc = "File Format with conform" })
 
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
+map('i', '<C-H>', "<C-W>")
