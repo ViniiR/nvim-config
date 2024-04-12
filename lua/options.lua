@@ -4,6 +4,16 @@ require("nvchad.options")
 vim.opt.spelllang = { "en_us" }
 vim.opt.spell = true
 
+-- floating error messages
+vim.diagnostic.config {
+  virtual_text = false,
+  float = {
+    header = false,
+    border = 'rounded',
+    focusable = true,
+  },
+}
+
 -- my options
 vim.opt["tabstop"] = 4
 vim.opt["shiftwidth"] = 4
@@ -20,7 +30,6 @@ vim.api.nvim_set_keymap("c", "<C-H>", "<C-W>", { noremap = true })
 -- vim.api.nvim_set_keymap('c', '<C-D>', 'dw', {noremap = true})
 
 -- custom groups
-
 vim.cmd("highlight CustomVBool guifg=#4d98d6")
 vim.cmd("highlight CustomVHTML guifg=#808080")
 vim.cmd("highlight CustomVVariable guifg=#4fc1ff")
@@ -78,6 +87,5 @@ vim.api.nvim_set_hl(0, "@function.method.call.tsx", { link = "CustomVFunction" }
 
 -- tags attr className
 vim.api.nvim_set_hl(0, "@tag.attribute.tsx", { link = "CustomVProperty" })
-
 -- tsx tag
 vim.api.nvim_set_hl(0, "@tag.tsx", { link = "CustomVType" })

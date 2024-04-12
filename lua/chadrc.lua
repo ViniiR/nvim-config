@@ -3,6 +3,9 @@ local M = {}
 M.ui = {
 	theme = "onedark",
 	-- transparency = true,
+    float = {
+        border = "rounded"
+    },
 	statusline = {
 		theme = "vscode_colored",
 		-- minimal, default, vscode, _colored
@@ -151,7 +154,6 @@ M.ui = {
 	},
 	hl_override = {
 		["@punctuation.delimiter"] = { fg = "white" },
-		["CustomWhite"] = { fg = "white" },
 		["@property"] = { link = "CustomVVariable" },
 		["Label"] = { link = "CustomVVariable" },
 		["@punctuation.bracket"] = { link = "CustomVPurple" },
@@ -178,6 +180,9 @@ M.ui = {
 			fg = "light_grey",
 			bg = "none",
 		},
+        -- SpellCap = {
+        --     undercurl = true;
+        -- }
 	},
 }
 
