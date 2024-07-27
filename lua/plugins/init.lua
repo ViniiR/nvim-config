@@ -41,6 +41,12 @@ return {
 						["<C-H>"] = function()
 							vim.api.nvim_input("<C-W>")
 						end,
+						["<Tab>"] = function()
+							vim.api.nvim_input("<C-n>")
+						end,
+						["<S-Tab>"] = function()
+							vim.api.nvim_input("<C-p>")
+						end,
 					},
 				},
 			},

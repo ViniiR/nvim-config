@@ -20,15 +20,24 @@ local options = {
 		json = {
 			"prettierd",
 		},
+		cpp = {
+			"clang_format",
+		},
+		c = {
+			"clang_format",
+		},
 		jsonc = {
 			"prettierd",
 		},
 	},
+
 	ft_parsers = {
 		javascript = "babel",
 		javascriptreact = "babel",
 		typescript = "typescript",
 		typescriptreact = "typescript",
+		c = "clang_format",
+		cpp = "clang_format",
 		vue = "vue",
 		-- rust = "rust",
 		css = "css",
@@ -36,9 +45,9 @@ local options = {
 		--     less = "less",
 		html = "html",
 		json = "json",
-		    jsonc = "json",
-		    yaml = "yaml",
-		    markdown = "markdown",
+		jsonc = "json",
+		yaml = "yaml",
+		markdown = "markdown",
 		--     ["markdown.mdx"] = "mdx",
 		--     graphql = "graphql",
 		--     handlebars = "glimmer",

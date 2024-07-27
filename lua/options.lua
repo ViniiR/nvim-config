@@ -3,6 +3,8 @@ require("nvchad.options")
 --
 vim.opt.spelllang = { "en_us" }
 vim.opt.spell = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- floating error messages
 vim.diagnostic.config {
@@ -84,6 +86,7 @@ vim.api.nvim_set_hl(0, "@function.call.tsx", { link = "CustomVFunction" })
 vim.api.nvim_set_hl(0, "@function.call.typescript", { link = "CustomVFunction" })
 vim.api.nvim_set_hl(0, "@function.method.call.typescript", { link = "CustomVFunction" })
 vim.api.nvim_set_hl(0, "@function.method.call.tsx", { link = "CustomVFunction" })
+vim.api.nvim_set_hl(0, "@constructor.cpp", { link = "CustomVFunction" })
 
 -- tags attr className
 vim.api.nvim_set_hl(0, "@tag.attribute.tsx", { link = "CustomVProperty" })

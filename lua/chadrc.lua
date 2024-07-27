@@ -3,9 +3,15 @@ local M = {}
 M.ui = {
 	theme = "onedark",
 	-- transparency = true,
-    float = {
-        border = "rounded"
-    },
+	float = {
+		border = "rounded",
+	},
+	tabufline = {
+		-- add useful stuff at th end instead of buttons
+		order = { "treeOffset", "buffers", "tabs" },
+		-- original
+		-- order = { "treeOffset", "buffers", "tabs", "btns" },
+	},
 	statusline = {
 		theme = "vscode_colored",
 		-- minimal, default, vscode, _colored
@@ -35,7 +41,7 @@ M.ui = {
 			"operatingSystem",
 			"lineFeed",
 			"lsp",
-			"fileEncoding",
+			-- "fileEncoding",
 			"tabLength",
 			"cursor",
 			"cwd",
@@ -153,6 +159,7 @@ M.ui = {
 		},
 	},
 	hl_override = {
+		["Include"] = { link = "@keyword.repeat" },
 		["@punctuation.delimiter"] = { fg = "white" },
 		["@property"] = { link = "CustomVVariable" },
 		["Label"] = { link = "CustomVVariable" },
@@ -166,11 +173,12 @@ M.ui = {
 		["@type.builtin"] = { link = "CustomVType" },
 		["Function"] = { link = "CustomVFunction" },
 		["@function"] = { link = "CustomVFunction" },
-		["@function.call"] = { link = "CustomVFunction" },
 		["@function.builtin"] = { link = "CustomVFunction" },
 		-- ["@function.macro"] = { link = "@keyword.function" },
 		["@variable"] = { link = "CustomVVariable" },
 		["@variable.member"] = { link = "CustomVProperty" },
+		["@function.call"] = { link = "CustomVFunction" },
+		-- ["@constructor"] = { fg = "" },
 		-- ["@spell"] = { guifg = "cyan" },
 		NvDashAscii = {
 			fg = "green",
@@ -180,9 +188,9 @@ M.ui = {
 			fg = "light_grey",
 			bg = "none",
 		},
-        -- SpellCap = {
-        --     undercurl = true;
-        -- }
+		-- SpellCap = {
+		--     undercurl = true;
+		-- }
 	},
 }
 
