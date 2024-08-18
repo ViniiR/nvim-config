@@ -11,8 +11,9 @@ map("n", "<leader>fm", function()
 	require("conform").format()
 end, { desc = "File Format with conform" })
 
-map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
+-- map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 map("i", "<C-H>", "<C-W>")
+-- map("i", "j", "jj", { noremap = true, silent = true })
 -- map("n", "<C-v>", "<C-v>", { noremap = true })
 
 nomap("n", "<C-c>")

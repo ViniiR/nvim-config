@@ -14,6 +14,10 @@
       {
         "language": "rust",
         "path": "./rust.json"
+      },
+      {
+        "language": "cpp",
+        "path": "./cpp.json"
       }
     ]
   }
