@@ -49,26 +49,27 @@ return {
 						end,
 					},
 				},
+				file_ignore_patterns = { "node_modules", ".git/", "target" },
 			},
 		},
 	},
 
-    {
-        "rust-lang/rust.vim",
-        ft = 'rust',
-        init = function ()
-            vim.g.rustfmt_autosave = 1
-        end
-    },
+	{
+		"rust-lang/rust.vim",
+		ft = "rust",
+		init = function()
+			vim.g.rustfmt_autosave = 1
+		end,
+	},
 
-    {
-        "simrat39/rust-tools.nvim",
-        ft = "rust",
-        opts = function ()
-            return require("configs.rust-tools")
-        end,
-        config = function (_, opts)
-            require("rust-tools").setup(opts)
-        end
-    }
+	{
+		"simrat39/rust-tools.nvim",
+		ft = "rust",
+		opts = function()
+			return require("configs.rust-tools")
+		end,
+		config = function(_, opts)
+			require("rust-tools").setup(opts)
+		end,
+	},
 }

@@ -29,6 +29,15 @@ local options = {
 		jsonc = {
 			"prettierd",
 		},
+		css = {
+			"prettierd",
+		},
+		scss = {
+			"prettierd",
+		},
+		sass = {
+			"prettierd",
+		},
 	},
 
 	ft_parsers = {

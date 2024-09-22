@@ -10,6 +10,9 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("n", "<leader>fm", function()
 	require("conform").format()
 end, { desc = "File Format with conform" })
+map("n", "<leader>tr", ":NvimTreeRefresh<CR>", { noremap = true, desc = "Nvim Tree Refresh" })
+
+map("v", "<C-c>", "<ESC>", {noremap = true, silent = true})
 
 -- map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 map("i", "<C-H>", "<C-W>")
@@ -17,7 +20,7 @@ map("i", "<C-H>", "<C-W>")
 -- map("n", "<C-v>", "<C-v>", { noremap = true })
 
 nomap("n", "<C-c>")
--- tnoremap <C-h> <C-\><C-N><C-w>h
+
 -- must do ctrl l to enter nterminal then ctrl h to move window, else ctrl backspace would not work
 vim.api.nvim_exec(
 	[[
