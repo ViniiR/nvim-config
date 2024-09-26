@@ -178,6 +178,7 @@ M.ui = {
 		["@variable"] = { link = "CustomVVariable" },
 		["@variable.member"] = { link = "CustomVProperty" },
 		["@function.call"] = { link = "CustomVFunction" },
+		["@lsp.type.method.rust"] = { link = "CustomVFunction" },
 		-- ["@constructor"] = { fg = "" },
 		-- ["@spell"] = { guifg = "cyan" },
 		NvDashAscii = {

@@ -7,14 +7,14 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- floating error messages
-vim.diagnostic.config {
-  virtual_text = false,
-  float = {
-    header = false,
-    border = 'rounded',
-    focusable = true,
-  },
-}
+vim.diagnostic.config({
+	virtual_text = false,
+	float = {
+		header = false,
+		border = "rounded",
+		focusable = true,
+	},
+})
 
 -- my options
 vim.opt["tabstop"] = 4
@@ -83,6 +83,7 @@ vim.api.nvim_set_hl(0, "@function.typescript", { link = "CustomVFunction" })
 
 -- func calls
 vim.api.nvim_set_hl(0, "@function.call.tsx", { link = "CustomVFunction" })
+vim.api.nvim_set_hl(0, "@function.call.rust", { link = "CustomVFunction" })
 vim.api.nvim_set_hl(0, "@function.call.typescript", { link = "CustomVFunction" })
 vim.api.nvim_set_hl(0, "@function.method.call.typescript", { link = "CustomVFunction" })
 vim.api.nvim_set_hl(0, "@function.method.call.tsx", { link = "CustomVFunction" })
@@ -92,3 +93,7 @@ vim.api.nvim_set_hl(0, "@constructor.cpp", { link = "CustomVFunction" })
 vim.api.nvim_set_hl(0, "@tag.attribute.tsx", { link = "CustomVProperty" })
 -- tsx tag
 vim.api.nvim_set_hl(0, "@tag.tsx", { link = "CustomVType" })
+
+--rust
+vim.api.nvim_set_hl(0, "@lsp.type.method.rust", { link = "CustomVFunction" })
+vim.api.nvim_set_hl(0, "@lsp.type.method", { link = "CustomVFunction" })

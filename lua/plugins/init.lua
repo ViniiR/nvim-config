@@ -53,23 +53,28 @@ return {
 			},
 		},
 	},
-
 	{
-		"rust-lang/rust.vim",
-		ft = "rust",
-		init = function()
-			vim.g.rustfmt_autosave = 1
-		end,
+		"mrcjkb/rustaceanvim",
+		version = "^5", -- Recommended
+		lazy = false, -- This plugin is already lazy
 	},
 
-	{
-		"simrat39/rust-tools.nvim",
-		ft = "rust",
-		opts = function()
-			return require("configs.rust-tools")
-		end,
-		config = function(_, opts)
-			require("rust-tools").setup(opts)
-		end,
-	},
+	-- {
+	-- 	"rust-lang/rust.vim",
+	-- 	ft = "rust",
+	-- 	init = function()
+	-- 		vim.g.rustfmt_autosave = 1
+	-- 	end,
+	-- },
+	--
+	-- {
+	-- 	"simrat39/rust-tools.nvim",
+	-- 	ft = "rust",
+	-- 	opts = function()
+	-- 		return require("configs.rust-tools")
+	-- 	end,
+	-- 	config = function(_, opts)
+	-- 		require("rust-tools").setup(opts)
+	-- 	end,
+	-- },
 }
