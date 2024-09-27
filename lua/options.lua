@@ -97,3 +97,4 @@ vim.api.nvim_set_hl(0, "@tag.tsx", { link = "CustomVType" })
 --rust
 vim.api.nvim_set_hl(0, "@lsp.type.method.rust", { link = "CustomVFunction" })
 vim.api.nvim_set_hl(0, "@lsp.type.method", { link = "CustomVFunction" })
+

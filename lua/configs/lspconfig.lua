@@ -10,7 +10,7 @@ local servers = {
 	"emmet_language_server",
 	"tsserver",
 	"html",
-    "cssls",
+	"cssls",
 	"tailwindcss",
 	"eslint",
 	"jsonls",
@@ -19,8 +19,8 @@ local servers = {
 	"bashls",
 	"prismals",
 	-- "rust_analyzer",
-    "clangd",
-    "neocmake"
+	"clangd",
+	"neocmake",
 }
 
 for _, lsp in ipairs(servers) do
@@ -30,6 +30,15 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
+-- vim.g.rustaceanvim = {
+-- 	server = {
+-- 		on_attach = function(client, bufnr)
+--             vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufnr)
+--             vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufnr)
+-- 		end,
+-- 	},
+-- }
 
 -- lspconfig.rust_analyzer.setup({
 -- 	filetypes = { "rust" },

@@ -57,15 +57,41 @@ return {
 		"mrcjkb/rustaceanvim",
 		version = "^5", -- Recommended
 		lazy = false, -- This plugin is already lazy
+		dependencies = "neovim/nvim-lspconfig",
+		config = function()
+			local lspconfig = require("nvchad.configs.lspconfig")
+			vim.g.rustaceanvim = {
+				--TODO: fix this shit, fsr autoformat broke
+				server = {
+					on_attach = lspconfig.on_attach,
+					default_settings = {
+						["rust-analyzer"] = {
+							capabilities = lspconfig.capabilities,
+							cargo = {
+								allFeatures = true,
+							},
+							-- checkOnSave = true,
+							-- check = {
+							-- 	enable = true,
+							-- 	command = "check",
+							-- },
+						},
+					},
+				},
+			}
+		end,
+		ft = { "rust" },
 	},
 
-	-- {
-	-- 	"rust-lang/rust.vim",
-	-- 	ft = "rust",
-	-- 	init = function()
-	-- 		vim.g.rustfmt_autosave = 1
-	-- 	end,
-	-- },
+    -- this plugin is actually used ok
+    -- dont remove it again, dumbshit
+	{
+		"rust-lang/rust.vim",
+		ft = "rust",
+		init = function()
+			vim.g.rustfmt_autosave = 1
+		end,
+	},
 	--
 	-- {
 	-- 	"simrat39/rust-tools.nvim",

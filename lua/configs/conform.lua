@@ -38,6 +38,9 @@ local options = {
 		sass = {
 			"prettierd",
 		},
+		-- rust = {
+		-- 	"rust-analyzer",
+		-- },
 	},
 
 	ft_parsers = {
